@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Punch Game Vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-body">
+            <img class="punch-bag" :src="picture" alt="bag">
+            <div class="life-box">
+                <div class="life-bar" :style="{width: life + '%'}"></div>
+            </div>
+            <div class="controls"><button v-if="!gameOver" @click="punch">Punch</button><button
+                    @click="restart">Restart</button></div>
+        </div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
